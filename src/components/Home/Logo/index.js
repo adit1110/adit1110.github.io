@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
-import LogoS from '../../../assets/images/logo-s.png' /* change this to logo from midget */
+import LogoS from '../../../assets/images/favicon.png' /* change this to logo from midget */
 import './index.scss'
 
 const Logo = () => {
@@ -10,18 +9,16 @@ const Logo = () => {
   const solidLogoRef = useRef()
 
   useEffect(() => {
-    gsap.registerPlugin(DrawSVGPlugin)
-
     gsap.timeline()
       .to(bgRef.current, {
         duration: 1,
         opacity: 1,
       })
       .from(outlineLogoRef.current, {
-        drawSVG: 0,
-        duration: 20,
-      })
-
+        opacity: 0,
+        duration: 1,
+      });
+  
     gsap.fromTo(
       solidLogoRef.current,
       {
@@ -29,11 +26,12 @@ const Logo = () => {
       },
       {
         opacity: 1,
-        delay: 4,
-        duration: 4,
+        delay: 1,
+        duration: 1,
       }
-    )
-  }, [])
+    );
+  }, []);
+  
 
   return (
     <div className="logo-container" ref={bgRef}>
