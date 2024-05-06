@@ -1,0 +1,18 @@
+{
+    "portfolio": [
+        {
+            "cover": "/portfolio/1/java.png",
+            "title": "1027 Projects",
+            "description": "This is some of the projects from my intro to DSA class, uses Java",
+            "url": "https://github.com/adit1110/CS1027"
+
+        },
+        {
+            "cover": "/portfolio/1/sudoku.png",
+            "title": "Sudoku Solver",
+            "description": "C",
+            "url": "https://github.com/adit1110/sudokugame"
+            
+        }
+    ]
+}

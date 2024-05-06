@@ -1,0 +1,42 @@
+.logo-container {
+    z-index: 0;
+    width: 350px; // Adjust width as necessary
+    height: 530px; // Adjust height proportionally to maintain aspect ratio
+    opacity: 1; // Make sure the logo is visible
+    position: absolute;
+    top: 0;
+    right: 10%; // Adjust right position as necessary
+    bottom: 0;
+    left: auto;
+    margin: auto;
+  
+    svg {
+      width: 100%;
+      height: auto;
+      bottom: 0;
+      transform: scale(0.9) rotateZ(30deg) !important;
+      opacity: 1; // Make sure the SVG is visible if it should be
+    }
+  
+    .solid-logo {
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: 0;
+      margin: auto;
+      width: 100%;
+      opacity: 1; // Make sure the solid part of the logo is visible if it should be
+      transform: scale(0.9) rotateZ(30deg) !important;
+      z-index: 1;
+    }
+  }
+  
+.svg-container {
+    fill: none; // No fill, only stroke
+    stroke: #ffd700; // Stroke color
+    stroke-width: 10; // Stroke width to create the outline
+    stroke-linecap: round; // Round the ends of the stroke
+    stroke-linejoin: round; // Round the joints of the stroke
+    // If your SVG has a 'path' element, you may also add 'vector-effect: non-scaling-stroke' to keep the stroke width consistent when scaling
+}
